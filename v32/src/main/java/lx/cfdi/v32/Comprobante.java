@@ -477,60 +477,88 @@ public class Comprobante {
 
     @XmlElement(name = "Emisor", required = true)
     protected Comprobante.Emisor emisor;
+
     @XmlElement(name = "Receptor", required = true)
     protected Comprobante.Receptor receptor;
+
     @XmlElement(name = "Conceptos", required = true)
     protected Comprobante.Conceptos conceptos;
+
     @XmlElement(name = "Impuestos", required = true)
     protected Comprobante.Impuestos impuestos;
+
     @XmlElement(name = "Complemento")
     protected Comprobante.Complemento complemento;
+
     @XmlElement(name = "Addenda")
     protected Comprobante.Addenda addenda;
+
     @XmlAttribute(name = "version", required = true)
     protected String version;
+
     @XmlAttribute(name = "serie")
     protected String serie;
+
     @XmlAttribute(name = "folio")
     protected String folio;
+
     @XmlAttribute(name = "fecha", required = true)
     protected XMLGregorianCalendar fecha;
+
     @XmlAttribute(name = "sello", required = true)
     protected String sello;
+
     @XmlAttribute(name = "formaDePago", required = true)
     protected String formaDePago;
+
     @XmlAttribute(name = "noCertificado", required = true)
     protected String noCertificado;
+
     @XmlAttribute(name = "certificado", required = true)
     protected String certificado;
+
     @XmlAttribute(name = "condicionesDePago")
     protected String condicionesDePago;
+
     @XmlAttribute(name = "subTotal", required = true)
     protected BigDecimal subTotal;
+
     @XmlAttribute(name = "descuento")
     protected BigDecimal descuento;
+
     @XmlAttribute(name = "motivoDescuento")
     protected String motivoDescuento;
+
     @XmlAttribute(name = "TipoCambio")
     protected String tipoCambio;
+
     @XmlAttribute(name = "Moneda")
     protected String moneda;
+
     @XmlAttribute(name = "total", required = true)
     protected BigDecimal total;
+
     @XmlAttribute(name = "tipoDeComprobante", required = true)
     protected String tipoDeComprobante;
+
     @XmlAttribute(name = "metodoDePago", required = true)
     protected String metodoDePago;
+
     @XmlAttribute(name = "LugarExpedicion", required = true)
     protected String lugarExpedicion;
+
     @XmlAttribute(name = "NumCtaPago")
     protected String numCtaPago;
+
     @XmlAttribute(name = "FolioFiscalOrig")
     protected String folioFiscalOrig;
+
     @XmlAttribute(name = "SerieFolioFiscalOrig")
     protected String serieFolioFiscalOrig;
+
     @XmlAttribute(name = "FechaFolioFiscalOrig")
     protected XMLGregorianCalendar fechaFolioFiscalOrig;
+
     @XmlAttribute(name = "MontoFolioFiscalOrig")
     protected BigDecimal montoFolioFiscalOrig;
 
