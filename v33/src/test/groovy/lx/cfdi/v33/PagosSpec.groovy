@@ -36,14 +36,14 @@ class PagosSpec extends Specification{
         notThrown(MarshalException)
         GPathResult res = new XmlSlurper().parse(new ByteArrayInputStream(writer.toString().bytes))
         'Comprobante' == res.name()
-        println XmlUtil.serialize(res)
+        println PagosUtils.serialize(comprobante)
     }
 
 
 
     def buildComprobanteValido(){
         Comprobante comprobante = factory.createComprobante()
-        comprobante.tipoDeComprobante = CTipoDeComprobante.I
+        comprobante.tipoDeComprobante = CTipoDeComprobante.P
         comprobante.version = "3.3"
         comprobante.serie = 'CFDI'
         comprobante.folio = '1'
@@ -105,7 +105,7 @@ class PagosSpec extends Specification{
         docto.impSaldoAnt = 11160.00
         //docto.impPagado = 11160.00 // Obligatorio cuando hay mas de un documento relacionado
         docto.impSaldoInsoluto = docto.impSaldoAnt - pago.monto
-
+        pago.doctoRelacionado.add(docto)
         pagos.pago.add(pago)
         
 

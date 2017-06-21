@@ -556,7 +556,7 @@ public class Pagos {
     })
     public static class Pago {
 
-        @XmlElement(name = "DoctoRelacionado")
+        @XmlElement(name = "DoctoRelacionado",namespace = "http://www.sat.gob.mx/Pagos")
         protected List<DoctoRelacionado> doctoRelacionado;
         @XmlElement(name = "Impuestos")
         protected List<Impuestos> impuestos;

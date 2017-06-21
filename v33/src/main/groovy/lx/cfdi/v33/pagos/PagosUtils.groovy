@@ -1,5 +1,7 @@
 package lx.cfdi.v33.pagos
 
+import groovy.util.slurpersupport.GPathResult
+import groovy.xml.XmlUtil
 import lx.cfdi.v33.Pagos
 import lx.cfdi.v33.Comprobante
 
@@ -49,5 +51,22 @@ class PagosUtils {
 
         }
         return schema
+    }
+
+    static String serialize(Comprobante comprobante){
+        StringWriter writer = new StringWriter()
+        JAXBContext context = getContext()
+        Marshaller marshaller = getMarshaller(false)
+        marshaller.marshal(comprobante, writer)
+        GPathResult res = new XmlSlurper().parse(new ByteArrayInputStream(writer.toString().bytes))
+        return XmlUtil.serialize(res)
+    }
+
+    static byte[] toXmlByteArray(Comprobante comprobante){
+        JAXBContext context = getContext()
+        Marshaller marshaller = getMarshaller()
+        ByteArrayOutputStream os = new ByteArrayOutputStream()
+        marshaller.marshal(comprobante, os)
+        return os.toByteArray()
     }
 }
