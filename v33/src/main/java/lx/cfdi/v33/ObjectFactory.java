@@ -228,4 +228,71 @@ public class ObjectFactory {
         return new Comprobante.CfdiRelacionados.CfdiRelacionado();
     }
 
+    /***** Complemento comprobante de pagos *****/
+
+    
+    /**
+     * Create an instance of {@link Pagos }
+     *
+     */
+    public Pagos createPagos() {
+        return new Pagos();
+    }
+
+    /**
+     * Create an instance of {@link Pagos.Pago }
+     *
+     */
+    public Pagos.Pago createPagosPago() {
+        return new Pagos.Pago();
+    }
+
+    /**
+     * Create an instance of {@link Pagos.Pago.Impuestos }
+     *
+     */
+    public Pagos.Pago.Impuestos createPagosPagoImpuestos() {
+        return new Pagos.Pago.Impuestos();
+    }
+
+    /**
+     * Create an instance of {@link Pagos.Pago.Impuestos.Traslados }
+     *
+     */
+    public Pagos.Pago.Impuestos.Traslados createPagosPagoImpuestosTraslados() {
+        return new Pagos.Pago.Impuestos.Traslados();
+    }
+
+    /**
+     * Create an instance of {@link Pagos.Pago.Impuestos.Retenciones }
+     *
+     */
+    public Pagos.Pago.Impuestos.Retenciones createPagosPagoImpuestosRetenciones() {
+        return new Pagos.Pago.Impuestos.Retenciones();
+    }
+
+    /**
+     * Create an instance of {@link Pagos.Pago.DoctoRelacionado }
+     *
+     */
+    public Pagos.Pago.DoctoRelacionado createPagosPagoDoctoRelacionado() {
+        return new Pagos.Pago.DoctoRelacionado();
+    }
+
+    /**
+     * Create an instance of {@link Pagos.Pago.Impuestos.Traslados.Traslado }
+     *
+     */
+    public Pagos.Pago.Impuestos.Traslados.Traslado createPagosPagoImpuestosTrasladosTraslado() {
+        return new Pagos.Pago.Impuestos.Traslados.Traslado();
+    }
+
+    /**
+     * Create an instance of {@link Pagos.Pago.Impuestos.Retenciones.Retencion }
+     *
+     */
+    public Pagos.Pago.Impuestos.Retenciones.Retencion createPagosPagoImpuestosRetencionesRetencion() {
+        return new Pagos.Pago.Impuestos.Retenciones.Retencion();
+    }
+
 }

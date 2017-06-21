@@ -1,6 +1,8 @@
-package com.luxsoft.cfdi.v32
+package lx.cfdi.v33
 
-import lx.cfdi.v32.Comprobante
+import groovy.util.slurpersupport.GPathResult
+import groovy.xml.XmlUtil
+import lx.cfdi.v33.Comprobante
 
 import javax.xml.XMLConstants
 import javax.xml.bind.JAXBContext
@@ -12,15 +14,13 @@ import javax.xml.validation.SchemaFactory
 
 
 /**
- * Created by rcancino on 08/05/17.
+ * Created by rcancino on 13/06/17.
  */
 class CfdiUtils {
 
+    static String xsiSchemaLocation = "http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd"
 
-    static String xsiSchemaLocation = "http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd"
-    //static String xsiSchemaLocation = "www.sat.gob.mx/esquemas/ContabilidadE/1_1/BalanzaComprobacion http://www.sat.gob.mx/esquemas/ContabilidadE/1_1/BalanzaComprobacion/BalanzaComprobacion_1_1.xsd"
-
-    static URL schemaUrl = new URL("http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd")
+    static URL schemaUrl = new URL("http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd")
 
     public static JAXBContext getContext(){
         JAXBContext context = JAXBContext.newInstance(Comprobante.class)
@@ -95,5 +95,14 @@ class CfdiUtils {
     static String getFileName(Comprobante comprobante){
         String name = "${comprobante.tipoDeComprobante}-${comprobante.serie}-${comprobante.folio}+${comprobante.folio}"
         return name
+    }
+
+    static String serialize(Comprobante comprobante){
+        StringWriter writer = new StringWriter()
+        JAXBContext context = getContext()
+        Marshaller marshaller = getMarshaller(false)
+        marshaller.marshal(comprobante, writer)
+        GPathResult res = new XmlSlurper().parse(new ByteArrayInputStream(writer.toString().bytes))
+        return XmlUtil.serialize(res)
     }
 }

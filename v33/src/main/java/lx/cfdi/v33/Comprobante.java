@@ -8,6 +8,8 @@
 
 package lx.cfdi.v33;
 
+import com.sun.xml.internal.bind.marshaller.NamespacePrefixMapper;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -555,7 +557,9 @@ public class Comprobante {
     @XmlAttribute(name = "Folio")
     protected String folio;
     @XmlAttribute(name = "Fecha", required = true)
-    protected XMLGregorianCalendar fecha;
+    //protected XMLGregorianCalendar fecha;
+    protected String fecha;
+
     @XmlAttribute(name = "Sello", required = true)
     protected String sello;
     @XmlAttribute(name = "FormaPago")
@@ -836,8 +840,12 @@ public class Comprobante {
      *     possible object is
      *     {@link XMLGregorianCalendar }
      *     
-     */
+
     public XMLGregorianCalendar getFecha() {
+        return fecha;
+    }
+     */
+    public String getFecha() {
         return fecha;
     }
 
@@ -848,8 +856,12 @@ public class Comprobante {
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
-     */
+
     public void setFecha(XMLGregorianCalendar value) {
+        this.fecha = value;
+    }
+     */
+    public void setFecha(String value) {
         this.fecha = value;
     }
 
@@ -4353,4 +4365,30 @@ public class Comprobante {
 
     }
 
+
+    public static class MyPrefixed extends NamespacePrefixMapper{
+        private static final String CFDI_PREFIX = "cfdi"; // DEFAULT NAMESPACE
+        private static final String CFDI_URI = "http://www.sat.gob.mx/cfd/3";
+
+        private static final String PAGOS_PREFIX = "pago10";
+        private static final String PAGOS_URI = "http://www.sat.gob.mx/Pagos";
+
+        @Override
+        public String getPreferredPrefix(String namespaceUri, String suggestion, boolean requirePrefix) {
+            if(CFDI_URI.equals(namespaceUri)) {
+                return CFDI_PREFIX;
+            } else if(PAGOS_URI.equals(namespaceUri)) {
+                return PAGOS_PREFIX;
+            }
+            return suggestion;
+        }
+
+        @Override
+        public String[] getPreDeclaredNamespaceUris() {
+            return new String[] { CFDI_URI, PAGOS_URI };
+        }
+    }
+
 }
+
+
