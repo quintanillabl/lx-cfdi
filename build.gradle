@@ -23,7 +23,7 @@ allprojects {
 
     
     group = 'lx.cfdi'
-    version = "1.0.0"
+    version = "1.0.2"
 
     sourceCompatibility = 1.7
     targetCompatibility = 1.7
@@ -62,7 +62,7 @@ allprojects {
         publish = true
         override = true
         pkg {
-            repo = 'maven'
+            repo = 'cfdi'
             name = "${project.name}"
             desc = "${project.description}"
             licenses = ['Apache-2.0']
@@ -142,6 +142,7 @@ project('v33') {
         compile project(':utils')
     }
 }
+
 project('play') {
     description = """
         Pruebas diversas (Proof of concept)  para las librerias de CFDI's
