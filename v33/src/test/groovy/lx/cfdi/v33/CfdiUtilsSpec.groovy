@@ -168,7 +168,16 @@ class CfdiUtilsSpec extends Specification {
         Comprobante.Conceptos.Concepto.CuentaPredial cp = factory.createComprobanteConceptosConceptoCuentaPredial()
         cp.numero = "0s00df"
         concepto.cuentaPredial = cp
+        /*
+        Comprobante.Conceptos.Concepto.InformacionAduanera aduana = factory.createComprobanteConceptosConceptoInformacionAduanera()
+        aduana.numeroPedimento
+        concepto.informacionAduanera.add(aduana)
+          */
+        //concepto.informacionAduanera.collect {it.numeroPedimento}.join(',')
         conceptos.concepto.add(concepto)
+
+
+
         comprobante.conceptos = conceptos
 
         /** Impuestos **/
@@ -185,6 +194,9 @@ class CfdiUtilsSpec extends Specification {
         traslados.traslado.add(traslado)
         impuestos.traslados = traslados
         comprobante.setImpuestos(impuestos)
+
+
+
 
         return comprobante
     }

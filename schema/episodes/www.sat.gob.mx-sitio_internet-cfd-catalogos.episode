@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.7-b41 
+Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: PM.06.22 a las 01:06:25 PM CDT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.sat.gob.mx/sitio_internet/cfd/catalogos">
+    <schemaBindings map="false">
+      <package name="lx.cfdi.nomina12"/>
+    </schemaBindings>
+    <bindings scd="~tns:c_TipoDeComprobante">
+      <typesafeEnumClass ref="lx.cfdi.nomina12.CTipoDeComprobante"/>
+    </bindings>
+    <bindings scd="~tns:c_Moneda">
+      <typesafeEnumClass ref="lx.cfdi.nomina12.CMoneda"/>
+    </bindings>
+    <bindings scd="~tns:c_Pais">
+      <typesafeEnumClass ref="lx.cfdi.nomina12.CPais"/>
+    </bindings>
+    <bindings scd="~tns:c_Estado">
+      <typesafeEnumClass ref="lx.cfdi.nomina12.CEstado"/>
+    </bindings>
+    <bindings scd="~tns:c_UsoCFDI">
+      <typesafeEnumClass ref="lx.cfdi.nomina12.CUsoCFDI"/>
+    </bindings>
+    <bindings scd="~tns:c_MetodoPago">
+      <typesafeEnumClass ref="lx.cfdi.nomina12.CMetodoPago"/>
+    </bindings>
+    <bindings scd="~tns:c_TipoFactor">
+      <typesafeEnumClass ref="lx.cfdi.nomina12.CTipoFactor"/>
+    </bindings>
+  </bindings>
+</bindings>
+

@@ -3,7 +3,7 @@
     elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED,
     xmlns = {
         @XmlNs(prefix = "cfdi", namespaceURI = "http://www.sat.gob.mx/cfd/3"),
-        @XmlNs(prefix = "pago10", namespaceURI = "http://www.sat.gob.mx/Pagos")
+        @XmlNs(prefix = "pago10", namespaceURI = "http://www.sat.gob.mx/Pagos"),
     }
 )
 @XmlAccessorType(XmlAccessType.FIELD)

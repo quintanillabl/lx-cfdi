@@ -8,6 +8,8 @@
 
 package lx.cfdi.v33;
 
+import lx.cfdi.v33.nomina.Nomina;
+
 import javax.xml.bind.annotation.XmlRegistry;
 
 
@@ -293,6 +295,104 @@ public class ObjectFactory {
      */
     public Pagos.Pago.Impuestos.Retenciones.Retencion createPagosPagoImpuestosRetencionesRetencion() {
         return new Pagos.Pago.Impuestos.Retenciones.Retencion();
+    }
+
+
+    /***** Complemento de nomina *****/
+    
+    
+    public Nomina createNomina() {
+        return new Nomina();
+    }
+
+
+    public Nomina.Incapacidades createNominaIncapacidades() {
+        return new Nomina.Incapacidades();
+    }
+
+
+    public Nomina.OtrosPagos createNominaOtrosPagos() {
+        return new Nomina.OtrosPagos();
+    }
+
+
+    public Nomina.OtrosPagos.OtroPago createNominaOtrosPagosOtroPago() {
+        return new Nomina.OtrosPagos.OtroPago();
+    }
+
+
+    public Nomina.Deducciones createNominaDeducciones() {
+        return new Nomina.Deducciones();
+    }
+
+
+    public Nomina.Percepciones createNominaPercepciones() {
+        return new Nomina.Percepciones();
+    }
+
+
+    public Nomina.Percepciones.Percepcion createNominaPercepcionesPercepcion() {
+        return new Nomina.Percepciones.Percepcion();
+    }
+
+
+    public Nomina.Receptor createNominaReceptor() {
+        return new Nomina.Receptor();
+    }
+
+
+    public Nomina.Emisor createNominaEmisor() {
+        return new Nomina.Emisor();
+    }
+
+
+    public Nomina.Incapacidades.Incapacidad createNominaIncapacidadesIncapacidad() {
+        return new Nomina.Incapacidades.Incapacidad();
+    }
+
+
+    public Nomina.OtrosPagos.OtroPago.SubsidioAlEmpleo createNominaOtrosPagosOtroPagoSubsidioAlEmpleo() {
+        return new Nomina.OtrosPagos.OtroPago.SubsidioAlEmpleo();
+    }
+
+
+    public Nomina.OtrosPagos.OtroPago.CompensacionSaldosAFavor createNominaOtrosPagosOtroPagoCompensacionSaldosAFavor() {
+        return new Nomina.OtrosPagos.OtroPago.CompensacionSaldosAFavor();
+    }
+
+
+    public Nomina.Deducciones.Deduccion createNominaDeduccionesDeduccion() {
+        return new Nomina.Deducciones.Deduccion();
+    }
+
+
+    public Nomina.Percepciones.JubilacionPensionRetiro createNominaPercepcionesJubilacionPensionRetiro() {
+        return new Nomina.Percepciones.JubilacionPensionRetiro();
+    }
+
+
+    public Nomina.Percepciones.SeparacionIndemnizacion createNominaPercepcionesSeparacionIndemnizacion() {
+        return new Nomina.Percepciones.SeparacionIndemnizacion();
+    }
+
+
+    public Nomina.Percepciones.Percepcion.AccionesOTitulos createNominaPercepcionesPercepcionAccionesOTitulos() {
+        return new Nomina.Percepciones.Percepcion.AccionesOTitulos();
+    }
+
+
+    public Nomina.Percepciones.Percepcion.HorasExtra createNominaPercepcionesPercepcionHorasExtra() {
+        return new Nomina.Percepciones.Percepcion.HorasExtra();
+    }
+
+
+    public Nomina.Receptor.SubContratacion createNominaReceptorSubContratacion() {
+        return new Nomina.Receptor.SubContratacion();
+    }
+
+
+    public Nomina.Emisor.EntidadSNCF createNominaEmisorEntidadSNCF() {
+        return new Nomina.Emisor.EntidadSNCF();
     }
 
 }
