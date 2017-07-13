@@ -164,7 +164,8 @@ class CfdiUtilsSpec extends Specification {
         traslado1.tasaOCuota = '0.160000'
         traslado1.importe = 100.84
         concepto.impuestos.traslados.traslado.add(traslado1)
-        // Cuenta predial
+        
+        /* Cuenta predial
         Comprobante.Conceptos.Concepto.CuentaPredial cp = factory.createComprobanteConceptosConceptoCuentaPredial()
         cp.numero = "0s00df"
         concepto.cuentaPredial = cp

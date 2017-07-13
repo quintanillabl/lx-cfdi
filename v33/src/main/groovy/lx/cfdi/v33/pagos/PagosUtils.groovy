@@ -58,7 +58,7 @@ class PagosUtils {
         JAXBContext context = getContext()
         Marshaller marshaller = getMarshaller(false)
         marshaller.marshal(comprobante, writer)
-        GPathResult res = new XmlSlurper().parse(new ByteArrayInputStream(writer.toString().bytes))
+        GPathResult res = new XmlSlurper().parse(new ByteArrayInputStream(writer.toString().getBytes('UTF-8')))
         return XmlUtil.serialize(res)
     }
 
