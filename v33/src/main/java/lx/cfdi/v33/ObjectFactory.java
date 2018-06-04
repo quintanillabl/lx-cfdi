@@ -8,6 +8,7 @@
 
 package lx.cfdi.v33;
 
+import lx.cfdi.v33.ine.INE;
 import lx.cfdi.v33.nomina.Nomina;
 
 import javax.xml.bind.annotation.XmlRegistry;
@@ -268,6 +269,7 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link Pagos.Pago.Impuestos.Retenciones }
      *
+     * @return Retenciones instance
      */
     public Pagos.Pago.Impuestos.Retenciones createPagosPagoImpuestosRetenciones() {
         return new Pagos.Pago.Impuestos.Retenciones();
@@ -394,5 +396,31 @@ public class ObjectFactory {
     public Nomina.Emisor.EntidadSNCF createNominaEmisorEntidadSNCF() {
         return new Nomina.Emisor.EntidadSNCF();
     }
+
+
+    /**
+     * Create an instance of {@link INE }
+     *
+     */
+    public INE createINE() {
+        return new INE();
+    }
+
+    /**
+     * Create an instance of {@link INE.Entidad }
+     *
+     */
+    public INE.Entidad createINEEntidad() {
+        return new INE.Entidad();
+    }
+
+    /**
+     * Create an instance of {@link INE.Entidad.Contabilidad }
+     *
+     */
+    public INE.Entidad.Contabilidad createINEEntidadContabilidad() {
+        return new INE.Entidad.Contabilidad();
+    }
+
 
 }

@@ -1192,7 +1192,7 @@ public class Nomina {
                 @XmlAttribute(name = "SaldoAFavor", required = true)
                 protected BigDecimal saldoAFavor;
                 @XmlAttribute(name = "A\u00f1o", required = true)
-                protected short año;
+                protected short ano;
                 @XmlAttribute(name = "RemanenteSalFav", required = true)
                 protected BigDecimal remanenteSalFav;
 
@@ -1221,19 +1221,19 @@ public class Nomina {
                 }
 
                 /**
-                 * Obtiene el valor de la propiedad año.
+                 * Obtiene el valor de la propiedad ano.
                  *
                  */
-                public short getAño() {
-                    return año;
+                public short getAno() {
+                    return ano;
                 }
 
                 /**
-                 * Define el valor de la propiedad año.
+                 * Define el valor de la propiedad ano.
                  *
                  */
-                public void setAño(short value) {
-                    this.año = value;
+                public void setAno(short value) {
+                    this.ano = value;
                 }
 
                 /**
@@ -2134,7 +2134,7 @@ public class Nomina {
          *   &lt;complexContent>
          *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
          *       &lt;attribute name="TotalPagado" use="required" type="{http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI}t_ImporteMXN" />
-         *       &lt;attribute name="NumAñosServicio" use="required">
+         *       &lt;attribute name="NumAnosServicio" use="required">
          *         &lt;simpleType>
          *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}int">
          *             &lt;minInclusive value="0"/>
@@ -2160,7 +2160,7 @@ public class Nomina {
             @XmlAttribute(name = "TotalPagado", required = true)
             protected BigDecimal totalPagado;
             @XmlAttribute(name = "NumA\u00f1osServicio", required = true)
-            protected int numAñosServicio;
+            protected int numAnosServicio;
             @XmlAttribute(name = "UltimoSueldoMensOrd", required = true)
             protected BigDecimal ultimoSueldoMensOrd;
             @XmlAttribute(name = "IngresoAcumulable", required = true)
@@ -2193,19 +2193,19 @@ public class Nomina {
             }
 
             /**
-             * Obtiene el valor de la propiedad numAñosServicio.
+             * Obtiene el valor de la propiedad numAnosServicio.
              *
              */
-            public int getNumAñosServicio() {
-                return numAñosServicio;
+            public int getNumAnosServicio() {
+                return numAnosServicio;
             }
 
             /**
-             * Define el valor de la propiedad numAñosServicio.
+             * Define el valor de la propiedad numAnosServicio.
              *
              */
-            public void setNumAñosServicio(int value) {
-                this.numAñosServicio = value;
+            public void setNumAnosServicio(int value) {
+                this.numAnosServicio = value;
             }
 
             /**
@@ -2303,7 +2303,7 @@ public class Nomina {
         protected String fechaInicioRelLaboral;
 
         @XmlAttribute(name = "Antig\u00fcedad")
-        protected String antigüedad;
+        protected String antiguedad;
         @XmlAttribute(name = "TipoContrato", required = true)
         protected String tipoContrato;
         @XmlAttribute(name = "Sindicalizado")
@@ -2421,27 +2421,27 @@ public class Nomina {
         }
 
         /**
-         * Obtiene el valor de la propiedad antigüedad.
+         * Obtiene el valor de la propiedad antiguedad.
          * 
          * @return
          *     possible object is
          *     {@link String }
          *     
          */
-        public String getAntigüedad() {
-            return antigüedad;
+        public String getAntiguedad() {
+            return antiguedad;
         }
 
         /**
-         * Define el valor de la propiedad antigüedad.
+         * Define el valor de la propiedad antiguedad.
          * 
          * @param value
          *     allowed object is
          *     {@link String }
          *     
          */
-        public void setAntigüedad(String value) {
-            this.antigüedad = value;
+        public void setAntiguedad(String value) {
+            this.antiguedad = value;
         }
 
         /**

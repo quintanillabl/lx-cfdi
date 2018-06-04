@@ -21,6 +21,14 @@
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+
 # Gradle:
 .idea/**/gradle.xml
 .idea/**/libraries
