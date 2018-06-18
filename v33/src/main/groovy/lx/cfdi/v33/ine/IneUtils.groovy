@@ -26,7 +26,7 @@ class IneUtils {
         return context
     }
 
-    static Marshaller getMarshaller(validation = true, ValidationEventHandler validationHandler = null){
+    static Marshaller getMarshaller(validation = false, ValidationEventHandler validationHandler = null){
         JAXBContext context = getContext()
         Marshaller marshaller = context.createMarshaller()
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,true)

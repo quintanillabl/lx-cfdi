@@ -20,7 +20,9 @@ class CfdiUtils {
 
     static String xsiSchemaLocation = "http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd"
 
-    static URL schemaUrl = new URL("http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd")
+    // static URL schemaUrl = new URL("http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd")
+
+    static URL schemaUrl = new URL("http://www.papelsa.com.mx/cfdi/cfdv33.xsd")
 
     public static JAXBContext getContext(){
         JAXBContext context = JAXBContext.newInstance(Comprobante.class)
@@ -39,7 +41,7 @@ class CfdiUtils {
         return schema
     }
 
-    static Marshaller getMarshaller(validation = true, ValidationEventHandler validationHandler = null){
+    static Marshaller getMarshaller(validation = false, ValidationEventHandler validationHandler = null){
         JAXBContext context = getContext()
         Marshaller marshaller = context.createMarshaller()
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,true)
