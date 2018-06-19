@@ -42,9 +42,9 @@ class CadenaBuilder33 implements  URIResolver{
     Transformer getTransformer() {
         if (!this.transformer) {
             TransformerFactory factory=TransformerFactory.newInstance()
-            factory.setURIResolver(this)
-            StreamSource source	= new StreamSource(readXslFile())
-
+            //factory.setURIResolver(this)
+            StreamSource source	= resolve('cadenaoriginal_3_3.xslt', '') //new StreamSource(readXslFile())
+            println 'Source: ' + source
             this.transformer = factory.newTransformer(source)
         }
         return this.transformer
@@ -65,11 +65,11 @@ class CadenaBuilder33 implements  URIResolver{
 
     @Override
     Source resolve(String href, String base) throws TransformerException {
-        println "Resolviendo href: ${href}"
+        // println "Resolviendo href: ${href}"
         String location = "cfdi33/xslt/${href}"
         ClassLoader classloader = Thread.currentThread().getContextClassLoader()
         InputStream is = classloader.getResourceAsStream(location)
-        println "Resource found ${location} ${is}"
+        // println "Resource found ${location} ${is}"
         assert is !=  null, "No existe el resource: ${location}"
         StreamSource source = new StreamSource(is)
         return source
